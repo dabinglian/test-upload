@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title></title>
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/file-upload/vendor/jquery.ui.widget.js"></script>
+    <script src="./js/file-upload/jquery.iframe-transport.js"></script>
+    <script src="./js/file-upload/jquery.fileupload.js"></script>
+
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.css" rel="stylesheet">
+    <script src="./js/canvas-to-blob.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.js"></script>
+
+    <link href="https://cdn.bootcss.com/video.js/6.2.1/alt/video-js-cdn.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/video.js/6.2.1/alt/video.novtt.js"></script>
+
+    <link rel="stylesheet" href="./css/swiper-3.4.1.min.css"/>
+    <script src="./js/swiper-3.4.1.jquery.min.js"></script>
+
+    <link rel="stylesheet" href="./css/test.css"/>
+</head>
+<body>
+    <div class="photo-demo">
+        <div class="photo-container">
+            <div class="photo-box">
+                <img class="photo-img" src="./images/ph-bg2.jpg" alt="" />
+                <input id="upload" type="file" name="file" accept="image/*" />
+            </div>
+            <div class="show-photo" style="display: none;">
+                <div class="image-box">
+                    <div class="showImage">
+                        <img id="show-img" src="" alt=""/>
+                    </div>
+                </div>
+                <div class="handle-btns" style="display: none;">
+                    <a href="javascript:void(0)" class="del-btn">重拍</a>
+                    <a href="javascript:void(0)" class="sure-btn">确定</a>
+                </div>
+                <p class="preview-img"></p>
+            </div>
+        </div>
+        <!--<div class="video-box">-->
+            <!--<p>3、视频播放</p>-->
+            <!--<video id="video" class="video-js vjs-default-skin vjs-big-play-centered" style="display:block;width:100%;" webkit-playsinline playsinline controls preload="none"-->
+                   <!--height="200"-->
+                   <!--poster="./images/pic.jpg"-->
+                   <!--data-setup='{"example_option":true}'>-->
+                <!--<source src="./video/movie.mp4" type='video/mp4' />-->
+                <!--<source src="./video/movie.ogg" type='video/ogg' />-->
+            <!--</video>-->
+        <!--</div>-->
+    </div>
+    <script src="./js/common.js"></script>
+    <script src="./js/simpleDialog.js"></script>
+    <script src="./js/init.js"></script>
+    <script src="./js/test.js"></script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+/*html,body,div,p,span,a{*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+/*}*/
+
+/*.test-demo{*/
+    /*padding: 15px;*/
+/*}*/
+
+body{
+    position: relative;
+}
+
+/*弹出框*/
+#suoping {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 99;
+}
+.dialog{width: 420px;height: 325px;margin-left: -210px;display:none;z-index: 30000;box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    margin-top: -162px;position: fixed;*position: absolute;left: 50%;top: 50%;background: #fff;display: none;font-family: "微软雅黑";}
+.dialog .dialog-wpr{padding: 15px;}
+.dialog .header{
+    border-bottom: 2px solid #55bd18;
+    background: #fff;
+    box-shadow: none;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    padding: 0 5px;}
+.dialog .header p{
+    font-size: 16px;
+    color: #666;
+}
+.dialog .header .active{border-bottom: 2px solid #48c77f;color: #15b062;}
+.dialog .header .close{position: absolute;right: 10px;top: 5px;}
+.dialog .body{margin: 20px 10px;}
+.dialog .footer{position: relative;text-align: center;}
+.dialog .footer .normal-btn{margin-left: 25px;}
+
+/*加载中*/
+#_site_tip_loader{
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    height: 80px;
+    top: 50%;
+    margin-top: -40px;
+}
+
+/*提示*/
+#_site_tip{
+    position: fixed;
+    bottom: 30%;
+    text-align: center;
+    width:100%;
+    left:0;
+}
+#_site_tip .tip-wpr{
+    max-width:80%;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 8px;
+    position: relative;
+    display: none;
+    margin: 0 auto;
+}
+#_site_tip .tip-wpr.show{
+    display: block;
+}
+#_site_tip .tip-wpr .tip-icon{
+    width:24px;
+    height: 24px;
+    position: absolute;
+    left:20px;
+    top:10px;
+}
+#_site_tip .tip-wpr .tip-icon.tip-yes{
+    background:url(sprites.png) no-repeat 0 0;
+}
+#_site_tip .tip-wpr .tip-icon.tip-no{
+    background:url(sprites.png) no-repeat -26px 0;
+}
+#_site_tip .tip-wpr .tip-txt{
+    color:#fff;
+    text-align: center;
+    line-height:26px;
+    text-indent: 36px;
+    word-break: break-all;
+    padding:8px 15px;
+    font-size:14px;
+}
+
+/*弹出框*/
+.popup-wpr {
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    z-index: 99
+}
+
+.popup {
+    background-color: #fff;
+    opacity: 1;
+    min-height: 50%;
+    bottom: 0;
+    max-height: 80%;
+    overflow-y: auto;
+    transform: translateY(100%)
+}
+
+.popup .body {
+    padding: 0 .5rem
+}
+
+.popup .body .item-box {
+    border-top: 1px dotted #dedede;
+    margin-bottom: 10px;
+    padding-top: 10px
+}
+
+.popup .body .item-box .title {
+    border-left: 5px solid #93d4e2;
+    background: #f9f9f9;
+    padding: 0 15px;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px
+}
+
+.popup .body .item-box .content {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.popup .body .item-box .content .indicator {
+    margin-top: -10px
+}
+
+.popup .body .item-box .content .desc {
+    text-indent: 2em;
+    color: #1ea2bf;
+    line-height: 20px
+}
+
+.popup .body .chart-title {
+    text-align: center;
+    color: #1ea2bf;
+    font-weight: bolder;
+    border-bottom: 1px dotted #ddd;
+    padding-bottom: 10px
+}
+
+.test-demo{
+
+}
+.test-demo .upload-box a{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 150px;
+}
+
+#photodiv{
+    width: 300px;
+    height: 200px;
+    display: block;
+    background-color: white;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+}
+
+#photodiv #deletepic{
+    position:absolute;
+    width: 26px;
+    right: 0px;
+    top: 0px;
+    margin-top: -10px;margin-right: -10px;
+    display: none;
+}
+#photodiv #cardUrl{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#photodiv #uploadcard{
+    position: absolute;
+    opacity:0;
+    margin: 0 auto;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    left:0;
+    top:0;
+}
+.showImage{
+    position: relative;
+    width: 98%;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+    margin: 10px 1%;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    background: #ddd;
+    height: 500px;
+}
+.showImage img{
+    width: 100%;
+    vertical-align: middle;
+}
+.showImage .uploadprogress{
+    position: absolute;
+
+}
+
+/*图片剪切*/
+.img-clip{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.img-clip img{
+    width: 100%;
+    height: 100%;
+}
+.img-handle{
+    margin-bottom: 50px;
+}
+
+.img-handle .show-canvas{
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+.frame{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.frame .swiper-slide{
+    display: inline-block;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.frame .swiper-slide.active{
+    border: 1px solid #f00;
+}
+
+.handle-btns a{
+    display: inline-block;
+    margin-right: 20px;
+    padding: 3px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #000;
+    text-decoration: none;
+}
+  
+/*swiper*/
+.frame .swiper-slide{
+    height: 30px;
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+/*小云熊奖状*/
+.photo-box{
+    text-align: center;
+    position: relative;
+    width: 309px;
+    height: 406px;
+    margin: 0 auto;
+}
+.photo-box #upload{
+    position: absolute;
+    width: 309px;
+    height: 406px;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.show-photo{
+    margin: 10px auto;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+/*公共组件*/
+.common-box p{
+    display: inline-block;
+    padding: 5px 20px;
+    border: 1px solid #ddd;
+}
+
+/*上传图片*/
+.photo-demo .photo-box{
+    height: 250px;
+    border: 1px solid #ddd;
+}
+.photo-demo .photo-box #upload{
+    width: 100%;
+    height: 100%;
+}
+.photo-demo .preview-img img{
+    width: 100%;
+}

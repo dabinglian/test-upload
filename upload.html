@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>文件上传</title>
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/file-upload/vendor/jquery.ui.widget.js"></script>
+    <script src="./js/file-upload/jquery.iframe-transport.js"></script>
+    <script src="./js/file-upload/jquery.fileupload.js"></script>
+</head>
+<body>
+    <input id="fileupload" type="file" name="file" data-url="/action/upload/image.json" accept="image/*" multiple>
+    <img id="cardUrl" src="/images/lighten/lighteninfo/ico_camera.png"/>
+    <script>
+        $(function () {
+            function loadImg(files){
+                //获取文件
+                var file =files[0];
+                //创建读取文件的对象
+                var reader = new FileReader();
+
+                //创建文件读取相关的变量
+                var imgFile;
+
+                //为文件读取成功设置事件
+                reader.onload=function(e) {
+                    imgFile = e.target.result;
+                    $("#cardUrl").attr('src', imgFile);
+                };
+
+                //正式读取文件
+                reader.readAsDataURL(file);
+            }
+
+            $('#fileupload').fileupload({
+                dataType: 'file',
+                acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+                done: function (e, data) {
+                    $.each(data.result.files, function (index, file) {
+                        $('<p/>').text(file.name).appendTo(document.body);
+                    });
+                },
+                success: function(e, data){
+                    loadImg(data.files);
+                },
+                fail: function(e, data){
+                    loadImg(data.files);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
